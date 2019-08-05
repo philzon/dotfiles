@@ -3,3 +3,5 @@
 	email = philzon@users.noreply.github.com
 [alias]
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+[core]
+	editor = micro
