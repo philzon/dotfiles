@@ -5,3 +5,5 @@
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
 [core]
 	editor = micro
+[commit]
+	template = ~/.gitmessage
