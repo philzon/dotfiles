@@ -6,3 +6,6 @@ alias l='ls -CF'
 
 # GREP
 alias grep='grep --color=auto'
+
+# NANO
+alias nano='nano --tabsize=4 --autoindent --mouse --nohelp --nowrap --linenumbers --unix --morespace'
