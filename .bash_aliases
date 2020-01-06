@@ -1,11 +1,15 @@
-# LS
-alias ls='ls --color=auto'
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
+#!/bin/bash
 
-# GREP
-alias grep='grep --color=auto'
+# Terminal
+PS1='\[\033[01;32m\]\u@\h\[\033[01;37m\]:\[\033[0;36m\]\W\[\033[00m\]\$ '
 
-# NANO
+# Aliases
+alias ls="ls --color=auto"
+alias ll="ls --color=auto -l"
+alias la="ls --color=auto -A"
+alias l="ls --color=auto -CF"
+alias grep='grep --colour=auto'
 alias nano='nano --tabsize=4 --autoindent --mouse --nohelp --nowrap --linenumbers --unix --morespace'
+
+# Paths
+PATH=:~/bin/docker:${PATH}
