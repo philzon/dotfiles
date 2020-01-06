@@ -1,0 +1,13 @@
+#!/bin/bash
+
+docker run \
+    --init \
+    --rm \
+    -it \
+    --user $(id -u):$(id -g) \
+    --workdir ${PWD} \
+    --volume ${PWD}:${PWD} \
+    gcc:7.5.0 \
+    ${@:-bash}
+
+exit $?
