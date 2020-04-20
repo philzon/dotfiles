@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [ -z ${1} ]
+then
+    echo "Usage: docker-run <IMAGE> [COMMANDS]..."
+    echo ""
+    echo "Quickly run a Docker container mounted to ${PWD}"
+    exit 1
+fi
+
+IMAGE=${1}
+shift
+
+docker run \
+    --init \
+    --rm \
+    -it \
+    --user "$(id -u):$(id -g)" \
+    --workdir "${PWD}" \
+    --volume "${PWD}:${PWD}" \
+    "${IMAGE}" \
+    ${@:-bash}
+
+exit $?

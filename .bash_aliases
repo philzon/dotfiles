@@ -13,5 +13,4 @@ alias grep='grep --colour=auto'
 alias nano='nano --tabsize=4 --autoindent --mouse --nohelp --nowrap --linenumbers --unix --morespace'
 
 # Paths
-PATH=:~/bin/helper:${PATH}
-PATH=:~/bin/docker:${PATH}
+PATH=:~/bin:${PATH}
