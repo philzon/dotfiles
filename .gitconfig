@@ -7,3 +7,5 @@
 	editor = micro
 [commit]
 	template = ~/.gitmessage
+[pull]
+	rebase = true
