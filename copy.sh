@@ -12,6 +12,7 @@ function copy {
     fi
 }
 
+copy "bin"
 copy ".alacritty.yml"
 copy ".bash_aliases"
 copy ".gitconfig"
