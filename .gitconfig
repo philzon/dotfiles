@@ -1,6 +1,6 @@
 [user]
 	name = Philzon
-	email = philzon@users.noreply.github.com
+	email = 7958046+philzon@users.noreply.github.com
 [alias]
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
 [core]
