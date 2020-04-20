@@ -1,9 +1,0 @@
-#!/bin/bash
-
-while true;
-do
-	OUT=$($@)
-	clear
-	echo "$OUT"
-	sleep 1
-done
