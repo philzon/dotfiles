@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Terminal
-# ${PWD/#$HOME/\~}
 PS1='\[\033[01;32m\]\u@\h\[\033[01;37m\]:\[\033[0;34m\]${PWD/#$HOME/\~}\[\033[00m\]\$ '
 
 # Aliases
