@@ -1,0 +1,40 @@
+#!/bin/bash
+
+function volume
+{
+	local CAP=$(amixer get Master | awk -F 'Mono:|[][]' 'BEGIN {RS=""}{print $3}')
+	local MUTE=$(amixer get Master | awk -F 'Mono:|[][]' 'BEGIN {RS=""}{print $7}')
+
+	if [ "${MUTE}" = "on" ]
+	then
+		echo "${CAP}"
+	else
+		echo "M%"
+	fi
+}
+
+function battery
+{
+	local CAP=$(cat /sys/class/power_supply/BAT0/capacity)
+	local OUT=""
+
+	for COUNT in {1..10}
+	do
+		BAT=$(($COUNT*10))
+		if [ "${BAT}" -le "${CAP}" ]
+		then
+			OUT="${OUT}+"
+		else
+			OUT="${OUT}-"
+		fi
+	done
+
+	echo "${OUT}"
+}
+
+function clock
+{
+	echo "$(date +'%Y-%M-%d %H:%M')"
+}
+
+xsetroot -name " [$(volume)]  [$(battery)]  [$(clock)]"
